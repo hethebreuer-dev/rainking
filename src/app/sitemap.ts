@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
-import { cities, nav, posts, services } from "@/data/site";
+import { cities, nav, posts, services, siteUrl } from "@/data/site";
 
-const base = process.env.NEXT_PUBLIC_SITE_URL || "https://rainkingiowa.com";
+const base = siteUrl;
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const paths = [

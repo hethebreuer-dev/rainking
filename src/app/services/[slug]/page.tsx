@@ -18,7 +18,6 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `${service.name} in Des Moines & Central Iowa`,
     description: service.short,
-    openGraph: { images: [service.image] },
   };
 }
 

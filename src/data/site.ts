@@ -1,6 +1,15 @@
 // All site content lives here. Pages read from these lists, so adding a
 // service, city, review or blog post is a matter of adding one entry.
 
+// Public URL of the site, used for share links and the sitemap. Set
+// NEXT_PUBLIC_SITE_URL once a custom domain is connected; until then Vercel's
+// production address is used.
+export const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : "http://localhost:3000");
+
 export const business = {
   name: "RainKing",
   legalName: "RainKing Irrigation",

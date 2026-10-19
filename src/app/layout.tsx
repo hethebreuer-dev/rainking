@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { siteUrl } from "@/data/site";
 
 // Fonts are bundled locally so builds never depend on Google's font CDN.
 const archivo = localFont({
@@ -20,7 +21,7 @@ const inter = localFont({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://rainkingiowa.com"),
+  metadataBase: new URL(siteUrl),
   title: {
     default: "RainKing | Iowa's #1 Professional Sprinkler Specialists",
     template: "%s | RainKing Irrigation",
@@ -30,8 +31,8 @@ export const metadata: Metadata = {
   openGraph: {
     siteName: "RainKing Irrigation",
     type: "website",
-    images: ["/images/home-lawn.jpg"],
   },
+  twitter: { card: "summary_large_image" },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
